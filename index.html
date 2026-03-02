@@ -161,9 +161,9 @@
                 <!-- Hero Graphic Container -->
                 <div class="relative w-full max-w-[500px] h-[460px] md:h-[500px] flex items-end justify-center z-10">
                     
-                    <!-- Soft Yellow Hexagon -->
-                    <!-- Utilizing CSS clip-path for shape. Color matched to the image -->
-                    <div class="absolute bottom-0 w-[85%] h-[80%] bg-[#FEC662] z-0 rounded-[20px]"
+                    <!-- Soft Hexagon Background -->
+                    <!-- Utilizing CSS clip-path for shape. Linear gradient top to bottom + slight rotation -->
+                    <div class="absolute bottom-4 w-[85%] h-[80%] bg-gradient-to-b from-[#fb923c] to-[#fef08a] z-0 rounded-[24px] rotate-[-5deg] scale-105"
                          style="clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);">
                     </div>
 
@@ -175,7 +175,8 @@
                          
                     <!-- Floating Card: 50k+ Customers -->
                     <!-- Positioned on the right side, overlapping the doctor and hexagon -->
-                    <div class="absolute right-[-10%] md:right-[-5%] top-[55%] z-20 bg-white/90 backdrop-blur-md px-6 py-4 rounded-[16px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] border border-white/50 border-b-0 border-r-0 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="absolute right-[-10%] md:right-[-5%] top-[55%] z-20 bg-white/90 backdrop-blur-[8px] px-6 py-4 rounded-[16px] border border-white/50 border-b-0 border-r-0 hover:-translate-y-1 transition-transform duration-300"
+                         style="box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);">
                         <div class="text-brand-darkBlue font-semibold text-[15px] mb-3">50k+ Customers</div>
                         <div class="flex items-center">
                             <!-- Stack of Avatars -->
@@ -194,7 +195,8 @@
 
                     <!-- Floating Card: Connect with a Doctor -->
                     <!-- Positioned on the bottom left, overlapping the bottom of the doctor -->
-                    <div class="absolute left-[-5%] md:left-[0%] bottom-[10%] z-20 bg-white/90 backdrop-blur-md pl-4 pr-8 py-4 rounded-[16px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] border border-white/50 border-b-0 border-r-0 flex items-center gap-4 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="absolute left-[-5%] md:left-[0%] bottom-[10%] z-20 bg-white/90 backdrop-blur-[8px] pl-4 pr-8 py-4 rounded-[16px] border border-white/50 border-b-0 border-r-0 flex items-center gap-4 hover:-translate-y-1 transition-transform duration-300"
+                         style="box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);">
                         <!-- Blue Video Icon Circle -->
                         <div class="w-12 h-12 rounded-full bg-brand-blue flex items-center justify-center shrink-0 shadow-inner">
                             <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
