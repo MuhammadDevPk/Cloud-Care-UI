@@ -31,15 +31,32 @@
         }
     </script>
 </head>
-<body class="font-sans antialiased w-full max-w-[100vw] overflow-x-hidden">
+<body class="font-sans antialiased w-full max-w-[100vw] min-h-screen bg-white overflow-x-hidden relative">
 
+    <!-- Global Split-Diagonal Background (Large Screens) -->
+    <div class="fixed inset-0 z-0 pointer-events-none hidden lg:block overflow-hidden">
+        <!-- Main Blue Shape with Diagonal Cut (~25-30 degrees) -->
+        <div class="absolute inset-y-0 right-0 w-[70vw] bg-gradient-to-bl from-[#2563eb] to-[#06b6d4]"
+             style="clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);">
+            
+            <!-- Freepik Watermark Pattern clamped inside blue shape -->
+            <div class="absolute inset-0 opacity-[0.035]" 
+                 style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Ctext x='10' y='180' transform='rotate(-40 50 100)' font-family='Arial, sans-serif' font-size='28' font-weight='900' fill='%23ffffff' letter-spacing='3'%3EFREEPIK%3C/text%3E%3C/svg%3E&quot;); background-repeat: repeat;">
+            </div>
+        </div>
+        
+        <!-- Secondary Lighter Blue Stripe (Bottom Right) -->
+        <div class="absolute bottom-0 right-0 w-[35vw] h-[45vh] bg-[#38bdf8] opacity-50 mix-blend-overlay"
+             style="clip-path: polygon(100% 0, 100% 100%, 0 100%);">
+        </div>
+    </div>
     <!-- Container: Flex Row for Split Screen (40/60) -->
     <div class="flex flex-col lg:flex-row min-h-screen">
         
         <!-- ========================================== -->
         <!-- LEFT SECTION (40%) : Solid White           -->
         <!-- ========================================== -->
-        <div class="w-full lg:w-[40%] bg-white flex flex-col p-8 md:p-12 relative z-10 shadow-xl lg:shadow-none">
+        <div class="w-full lg:w-[40%] bg-white lg:bg-transparent flex flex-col p-8 md:p-12 relative z-10 shadow-xl lg:shadow-none">
             
             <!-- Top Header (Logo) -->
             <header class="flex-none w-full">
@@ -122,14 +139,7 @@
         <!-- ========================================== -->
         <!-- RIGHT SECTION (60%) : vibrant diagonal gradient -->
         <!-- ========================================== -->
-        <div class="w-full lg:w-[60%] bg-gradient-to-br from-[#2653EB] via-[#2F89FF] to-[#0DE4FF] flex flex-col p-8 md:p-12 relative overflow-hidden min-h-[50vh] lg:min-h-screen">
-            
-            <!-- Optional: Decorative diagonal accents (similar to image) -->
-            <div class="absolute inset-0 pointer-events-none opacity-20">
-                <div class="absolute -top-[10%] -right-[10%] w-[120%] h-[120%] border-[80px] border-white/10 rounded-full blur-[100px]"></div>
-                <!-- Diagonal slash effect -->
-                <div class="absolute top-0 right-1/4 w-32 h-[150%] bg-white/10 rotate-12 -translate-y-12"></div>
-            </div>
+        <div class="w-full lg:w-[60%] bg-gradient-to-bl from-[#2563eb] to-[#06b6d4] lg:bg-none lg:bg-transparent flex flex-col p-8 md:p-12 relative lg:overflow-visible overflow-hidden min-h-[50vh] lg:min-h-screen">
 
             <!-- Top Header (Dropdown) -->
             <header class="flex-none w-full flex justify-end relative z-10">
@@ -146,10 +156,7 @@
             <!-- Main Content Area (Doctor graphic & widgets) -->
             <main class="flex-grow flex items-center justify-center p-4 relative w-full h-full pt-16 lg:pt-0">
                 
-                <!-- Freepik Style Watermarks Pattern -->
-                <div class="absolute inset-0 pointer-events-none opacity-[0.035] z-0" 
-                     style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Ctext x='10' y='180' transform='rotate(-40 50 100)' font-family='Arial, sans-serif' font-size='28' font-weight='900' fill='%23ffffff' letter-spacing='3'%3EFREEPIK%3C/text%3E%3C/svg%3E&quot;); background-repeat: repeat;">
-                </div>
+                <!-- Watermark moved to global background -->
 
                 <!-- Hero Graphic Container -->
                 <div class="relative w-full max-w-[500px] h-[460px] md:h-[500px] flex items-end justify-center z-10">
